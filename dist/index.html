@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniFormat — Multi-Format Content Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      #file-protocol-warning {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: #0b0f19;
+        color: #e2e8f0;
+        font-family: 'Inter', sans-serif;
+        padding: 40px 20px;
+        z-index: 999999;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .warn-card {
+        max-width: 580px;
+        margin: 60px auto;
+        background: #111726;
+        border: 1px solid #1e293f;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      }
+      .warn-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 28px;
+        background: #4f46e5;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: 0 4px 16px rgba(79,70,229,0.3);
+      }
+      .code-box {
+        background: #0c101c;
+        border: 1px solid #1f2b42;
+        border-radius: 8px;
+        padding: 12px;
+        margin: 16px 0;
+        font-family: monospace;
+        font-size: 13px;
+        color: #818cf8;
+        text-align: left;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DPGH-Db4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BmcN6CVP.css">
+  </head>
+  <body>
+    <div id="file-protocol-warning">
+      <div class="warn-card">
+        <div style="font-size: 36px; margin-bottom: 12px;">⚡</div>
+        <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 8px; color: #fff;">Open via Local Web Server</h2>
+        <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin-bottom: 16px;">
+          Modern React apps use ES modules which web browsers block when opened as a raw file (<code style="color:#cbd5e1;">file:///.../index.html</code>).
+        </p>
+        <div style="text-align: left; font-size: 12px; color: #cbd5e1; margin-bottom: 6px;">The dev server is running! Click below to open:</div>
+        <a href="http://localhost:5173" class="warn-btn">👉 Open http://localhost:5173</a>
+        <div style="margin-top: 24px; font-size: 12px; color: #64748b; text-align: left;">
+          Or in terminal run:
+          <div class="code-box">npm install<br>npm run dev</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.getElementById('file-protocol-warning').style.display = 'block';
+      }
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
